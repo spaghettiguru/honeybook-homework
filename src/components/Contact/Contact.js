@@ -5,7 +5,7 @@ import './Contact.scss';
 export function Contact(props) {
     return (
         <div className="contact">
-            <img src={props.pictureURL} alt="Contact" />
+            <img className="contact-picture" src={props.pictureURL} alt="Contact" />
             <div className="contact-details">
                 <img className="contact-company-logo" src={props.companyLogoURL} alt="Contact's employer company logo" />
                 <div className="contact-name">{props.name}</div>
