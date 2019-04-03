@@ -7,17 +7,18 @@
 .app-header {
     box-sizing: border-box;
     background: white;
-    padding: 20px 100px;
+    padding: 20px 10vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
     position: relative;
     z-index: 1;
 }
 
 .app-content {
-    padding: 60px 100px;
+    padding: 6vh 10vw;
     flex: 1 1 auto;
     overflow: auto;
 }
