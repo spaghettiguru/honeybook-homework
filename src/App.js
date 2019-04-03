@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {ContactList} from './components/ContactList/ContactList';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor(props) {
