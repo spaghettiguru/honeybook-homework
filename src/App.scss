@@ -27,8 +27,11 @@ $side-margin-width: 10vw;
 
 .filter-input {
     border: 1px solid silver;
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 10px 35px 10px 10px;
     width: 300px;
+    background: url('./search-icon.svg') no-repeat center right 10px;
+    background-size:  auto 60%;
 }
 
 .page-title {
