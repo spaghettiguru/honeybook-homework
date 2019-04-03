@@ -11,7 +11,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
     position: relative;
     z-index: 1;
@@ -21,6 +20,7 @@
     padding: 6vh 10vw;
     flex: 1 1 auto;
     overflow: auto;
+    text-align: center;
 }
 
 .filter-input {
@@ -31,4 +31,23 @@
 
 .page-title {
     margin: 0;
+    color: rgb(66, 75, 81);
+}
+
+@media (max-width: 604px) {
+    .page-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 525px) {
+    .app-header {
+        flex-wrap: wrap;
+        padding: 10px 10vw;
+    }
+
+    .filter-input {
+        width: 100%;
+        margin-top: 6px;
+    }
 }

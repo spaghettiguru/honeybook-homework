@@ -11,7 +11,7 @@ export function Contact(props) {
                 <div className="contact-name">{props.name}</div>
                 <div className="contact-work-info">{props.jobTitle} | @{props.companyName}</div>
                 <div className="contact-phone">Phone Number: {props.phoneNumber}</div>
-                <div className="contact-email">{props.email}</div>
+                <a href={'mailto://' + props.email} target="_blank" rel="noopener noreferrer" className="contact-email">{props.email}</a>
             </div>
         </div>
     )

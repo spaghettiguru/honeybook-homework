@@ -10,16 +10,24 @@ export function ContactList(props) {
         contactsToShow = props.contacts.filter(contact => {
             const {name, job, company_name, phone, email} = contact;
 
-            const matchFound = name.toLowerCase().includes(filterText) ||
+            const matchesFilter = name.toLowerCase().includes(filterText) ||
                 job.toLowerCase().includes(filterText) ||
                 company_name.toLowerCase().includes(filterText) ||
                 phone.toLowerCase().includes(filterText) ||
                 email.toLowerCase().includes(filterText)
             
-            return matchFound
+            return matchesFilter
         });
     } else {
         contactsToShow = props.contacts;
+    }
+
+    if (filterText && !contactsToShow.length) {
+        return (
+            <div className="contact-list-not-found">
+                No contacts were found that satisfy your search criteria. Please, try different search.
+            </div>
+        )
     }
 
     return (

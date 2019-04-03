@@ -41,4 +41,10 @@
     &-phone {
         margin-top: 12px;
     }
+
+    &-email {
+        &:link, &:visited, &:active {
+            color: inherit;
+        }
+    }
 }

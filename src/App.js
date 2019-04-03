@@ -41,8 +41,10 @@ class App extends Component {
         </header>
         <div className="app-content">
           {this.state.contacts && <ContactList contacts={this.state.contacts} filterText={this.state.filterText} />}
-          {!this.state.contacts && !this.state.networkErrorOccured && <div className="loader">Loading contacts...</div>}
-          {this.state.networkErrorOccured && <div className="error-message">Network error has occured. Please, refresh the page to try again.</div>}
+          {!this.state.contacts && !this.state.networkErrorOccured && 
+            <div className="loader">Loading contacts...</div>}
+          {this.state.networkErrorOccured && 
+            <div className="error-message">Network error has occured. Please, refresh the page to try again.</div>}
         </div>
       </div>
     );
