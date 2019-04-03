@@ -33,7 +33,7 @@ class App extends Component {
         <header className="app-header">
           <h1 className="page-title">Contact List</h1>
           <input 
-            type="search" 
+            type="text" 
             className="filter-input" 
             placeholder="search..." 
             value={this.state.filterText} 
