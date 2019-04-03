@@ -9,7 +9,7 @@ export function ContactList(props) {
     if (filterText) {
         contactsToShow = props.contacts.filter(contact => {
             const {name, job, company_name, phone, email} = contact;
-            
+
             const matchFound = name.toLowerCase().includes(filterText) ||
                 job.toLowerCase().includes(filterText) ||
                 company_name.toLowerCase().includes(filterText) ||
@@ -27,7 +27,7 @@ export function ContactList(props) {
             {
                 contactsToShow.map(
                     contact => 
-                    <li className="contact-list-item">
+                    <li className="contact-list-item" key={contact.email}>
                         <Contact
                             name={contact.name}
                             jobTitle={contact.job}
