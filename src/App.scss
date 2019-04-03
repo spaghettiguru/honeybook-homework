@@ -1,3 +1,5 @@
+$side-margin-width: 10vw;
+
 .app-container {
     display: flex;
     flex-direction: column;
@@ -7,7 +9,7 @@
 .app-header {
     box-sizing: border-box;
     background: white;
-    padding: 20px 10vw;
+    padding: 20px $side-margin-width;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +19,7 @@
 }
 
 .app-content {
-    padding: 6vh 10vw;
+    padding: 6vh $side-margin-width;
     flex: 1 1 auto;
     overflow: auto;
     text-align: center;
@@ -45,7 +47,8 @@
 @media (max-width: 525px) {
     .app-header {
         display: block;
-        padding: 10px 10vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .filter-input {
