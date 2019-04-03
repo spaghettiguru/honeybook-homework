@@ -6,36 +6,36 @@
     padding: 10px;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, .5);
     height: 200px;
-}
 
-.contact-picture {
-    max-width: 100%;
-}
+    &-picture {
+        max-width: 100%;
+    }
 
-.contact:hover .contact-details {
-    bottom: 0;
-}
+    &:hover .contact-details{
+        bottom: 0;
+    }
 
-.contact-details {
-    position: absolute;
-    background: white;
-    font-size: 11px;
-    bottom: -25px;
-    transition: bottom .3s ease-in-out;
-    left: 0;
-    right: 0;
-    padding: 0 10px 10px 10px;
-}
+    &-details {
+        position: absolute;
+        background: white;
+        font-size: 11px;
+        bottom: -25px;
+        transition: bottom .3s ease-in-out;
+        left: 0;
+        right: 0;
+        padding: 0 10px 10px 10px;
+    }
 
-.contact-company-logo {
-    margin-top: -15px;
-    height: 30px;
-}
+    &-company-logo {
+        margin-top: -15px;
+        height: 30px;
+    }
 
-.contact-name {
-    font-weight: bold;
-}
+    &-name {
+        font-weight: bold;
+    }
 
-.contact-phone {
-    margin-top: 12px;
+    &-phone {
+        margin-top: 12px;
+    }
 }
