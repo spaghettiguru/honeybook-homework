@@ -8,8 +8,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-      contacts: null
+      contacts: null,
+      filterText: ''
     };
+
+    this.onFilterChanged = this.onFilterChanged.bind(this);
   }
 
   async componentDidMount() {
@@ -22,13 +25,25 @@ class App extends Component {
       <div className="app-container">
         <header className="app-header">
           <h1>Contact List</h1>
-          <input type="search" className="filter-input" placeholder="search..." />
+          <input 
+            type="search" 
+            className="filter-input" 
+            placeholder="search..." 
+            value={this.state.filterText} 
+            onChange={this.onFilterChanged} />
         </header>
         <div className="app-content">
-          {this.state.contacts && <ContactList contacts={this.state.contacts} />}
+          {this.state.contacts && <ContactList contacts={this.state.contacts} filterText={this.state.filterText} />}
+          {!this.state.contacts && <div className="loader">Loading contacts...</div>}
         </div>
       </div>
     );
+  }
+
+  onFilterChanged(e) {
+    this.setState({
+      filterText: e.target.value
+    });
   }
 }
 
