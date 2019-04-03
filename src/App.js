@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div className="app-container">
         <header className="app-header">
-          <h1>Contact List</h1>
+          <h1 className="page-title">Contact List</h1>
           <input 
             type="search" 
             className="filter-input" 

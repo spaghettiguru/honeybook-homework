@@ -1,3 +1,9 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .app-header {
     box-sizing: border-box;
     background: white;
@@ -5,14 +11,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+    position: relative;
+    z-index: 1;
 }
 
 .app-content {
     padding: 60px 100px;
+    flex: 1 1 auto;
+    overflow: auto;
 }
 
 .filter-input {
     border: 1px solid silver;
     padding: 10px;
     width: 300px;
+}
+
+.page-title {
+    margin: 0;
 }
